@@ -20,6 +20,7 @@ app.get('/webhook/', function(req,res){
     res.send('no entry');
 })
 
+app.post('/webhook', function (req, res) {
 var data = req.body;
 
 // Make sure this is a page subscription
