@@ -1,6 +1,6 @@
 {
   "name": "facebookbot",
-  "version": "1.0.0",
+  "version": "0.5.0",
   "description": "our first facebook bot",
   "main": "index.js",
   "scripts": {
