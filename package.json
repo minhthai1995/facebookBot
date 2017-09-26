@@ -1,0 +1,27 @@
+{
+  "name": "facebookbot",
+  "version": "1.0.0",
+  "description": "our first facebook bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "test thoi nao"
+  },
+  "repository": {
+    "type": "git",
+    "url": "add later"
+  },
+  "keywords": [
+    "facebook",
+    "messenger",
+    "bot",
+    "node",
+    "heroku"
+  ],
+  "author": "Minh Thai",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.15.5",
+    "request": "^2.82.0"
+  }
+}
