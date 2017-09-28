@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
 const app = express();
+const crypto = require('crypto');
+const fetch = require('node-fetch');
 
 //const access = EAAFM8bGZAZA0wBAHhYIyfgAb2ZBLlBNvdnrNkiSldZAis3Ung67RZBr4leQ99ZB6XPFliyn78FTYQbMu9BHZCtogL4oWHFqmX5gTwtKC5HlTdrOspsw7oTqGmTSGZA1sJcBSk7FPpVX18fg37NNaaBdjojY8C3xsWqTK3yysM6pxd6vM9qp58cHT;
 app.set('port', (process.env.PORT || 5000));
@@ -25,7 +27,6 @@ app.post('/webhook/', function (req, res) {
 
   // Make sure this is a page subscription
   if (data.object === 'page') {
-
     // Iterate over each entry - there may be multiple if batched
     data.entry.forEach(function(entry) {
       var pageID = entry.id;
