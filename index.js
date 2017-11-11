@@ -233,11 +233,11 @@ function classify(sentence){
     return (highClass);
 }
 
-//
-// classify("who are you")
-//
-// classify("make me some lunch");
-//
-// classify("I am fucking hungry")
-//
-// classify("What will I receive at the university if I choose this program")
+
+classify("who are you")
+
+classify("make me some lunch");
+
+classify("I am fucking hungry")
+
+classify("What will I receive at the university if I choose this program")

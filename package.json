@@ -23,6 +23,7 @@
     "body-parser": "^1.18.2",
     "express": "^4.15.5",
     "node-wit": "^4.3.0",
-    "request": "^2.82.0"
+    "request": "^2.82.0",
+    "stemmer": "^1.0.2"
   }
 }
