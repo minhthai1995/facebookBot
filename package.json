@@ -22,8 +22,10 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.15.5",
+    "node-vntokenizer": "0.0.2",
     "node-wit": "^4.3.0",
     "request": "^2.82.0",
-    "stemmer": "^1.0.2"
+    "stemmer": "^1.0.2",
+    "stopword": "^0.1.9"
   }
 }

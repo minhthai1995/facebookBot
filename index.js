@@ -273,7 +273,7 @@ for (var i = 0; i <training_data.length; i++){
 
 function calculate_class_score_commonality(sentence, className){
 	var score = 0;
-	var mySentence = sentence.split(" ");
+	var mySentence = sw.removeStopwords(token.tokenize(sentence));
 	var word;
 	for (word in mySentence){
 		var stemmed_word = stemmer(mySentence[word])
@@ -336,18 +336,22 @@ function classify(sentence){
     default:
     	 response_sentence = "Tính năng này sẽ được cập nhật sớm hơn. Bạn có thể hỏi các câu hỏi khác về tuyển sinh ( yêu cầu đầu vào, yêu cầu xét tốt nghiệp, chuẩn tiếng anh, cấu trúc chương trình, cơ sở vật chất, học bổng khuyến khích học tập,  học phí thường niên ...)";
 }
-	// console.log("sentence:",sentence)
-	// console.log("class:", highClass);
-	// console.log("score:", highscore, "\n");
-    // console.log(response_sentence);
+    if (highscore < 0.2){
+    	 response_sentence = "Tính năng này sẽ được cập nhật sớm hơn. Bạn có thể hỏi các câu hỏi khác về tuyển sinh ( yêu cầu đầu vào, yêu cầu xét tốt nghiệp, chuẩn tiếng anh, cấu trúc chương trình, cơ sở vật chất, học bổng khuyến khích học tập,  học phí thường niên ...)";
+    }
+	console.log("sentence:",sentence)
+	console.log("class:", highClass);
+	console.log("score:", highscore);
+    console.log(response_sentence,"\n");
     return (response_sentence);
 }
 
+classify("chuẩn tiếng anh đầu vào");
 
-classify("who are you")
-//
-// classify("make me some lunch");
-//
-// classify("I am fucking hungry")
-//
-// classify("What will I receive at the university if I choose this program")
+classify("hello")
+
+classify("thịt")
+
+classify("how about the tuition fee")
+
+classify("What will I receive at the university if I choose this program")
