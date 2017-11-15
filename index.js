@@ -156,40 +156,25 @@ training_data.push({"class":" Chào hỏi ", "sentence":"Hi"})
 training_data.push({"class":" Chào hỏi ", "sentence":"nè nè"})
 
 
-training_data.push({"class":"Chuẩn tiếng anh đầu vào", "sentence":"cần bao nhiêu điểm tiếng anh?"})
-training_data.push({"class":"Chuẩn tiếng anh đầu vào", "sentence":"chuẩn tiếng anh đầu vào là ?"})
 training_data.push({"class":"Chuẩn tiếng anh đầu vào", "sentence":"mấy điểm TOEFL hay IELTS là vào được?"})
-training_data.push({"class":"Chuẩn tiếng anh đầu vào", "sentence":"đạt mấy điểm anh văn là qua?"})
 training_data.push({"class":"Chuẩn tiếng anh đầu vào", "sentence":"cần bao nhiêu điểm tiếng anh?"})
-training_data.push({"class":"Chuẩn tiếng anh đầu vào", "sentence":"Tiếng anh đầu vào là gì?"})
 training_data.push({"class":"Chuẩn tiếng anh đầu vào", "sentence":"Chuẩn tiếng anh đầu vào là mấy?"})
-training_data.push({"class":"Chuẩn tiếng anh đầu vào", "sentence":"Tiếng anh cần bao nhiêu?"})
-training_data.push({"class":"Chuẩn tiếng anh đầu vào", "sentence":"English đầu vào là sao ạ?"})
-training_data.push({"class":"Chuẩn tiếng anh đầu vào", "sentence":"Mấy điểm tiếng anh đầu vào ạ?"})
-training_data.push({"class":"Chuẩn tiếng anh đầu vào", "sentence":"Có cần học TOEFL hay IELTs không ạ?"})
-training_data.push({"class":"Chuẩn tiếng anh đầu vào", "sentence":"Tiếng anh cần bao nhiêu để vào học chương trình ạ?"})
+training_data.push({"class":"Chuẩn tiếng anh đầu vào", "sentence":"anh văn cần để vào học chương trình ạ?"})
 
 
-training_data.push({"class":"ENGLISH STANDARD", "sentence":"English requirements "})
 training_data.push({"class":"ENGLISH STANDARD", "sentence":"IELTS certificate to be get out"})
 training_data.push({"class":"ENGLISH STANDARD", "sentence":"TOEFL certificate to be get out"})
-training_data.push({"class":"ENGLISH STANDARD", "sentence":"What is needed for English? "})
-training_data.push({"class":"ENGLISH STANDARD", "sentence":"English score that I must pass to be enter the program"})
+training_data.push({"class":"ENGLISH STANDARD", "sentence":"English score requirements  that I must pass to be enter the program"})
 
 training_data.push({"class":"curriculum structure", "sentence":"curriculum structure "})
 training_data.push({"class":"curriculum structure", "sentence":"contents of the program "})
-training_data.push({"class":"curriculum structure", "sentence":"what is the contents for the program? "})
 training_data.push({"class":"curriculum structure", "sentence":"what will i learn in the program? "})
 
 training_data.push({"class":"Cấu trúc chương trình", "sentence":"Nội dung đào tạo là gì?"})
 training_data.push({"class":"Cấu trúc chương trình", "sentence":"Cho em hỏi cấu trúc chương trình là gì ạ?"})
 training_data.push({"class":"Cấu trúc chương trình", "sentence":"Chương trình đào tạo những kĩ năng gì ạ?"})
 training_data.push({"class":"Cấu trúc chương trình", "sentence":"Em sẽ được học gì trong chương trình ạ?"})
-training_data.push({"class":"Cấu trúc chương trình", "sentence":"Hệ đào tạo của mình sẽ như thế nào ạ?"})
-training_data.push({"class":"Cấu trúc chương trình", "sentence":"Chương trình đào tạo của mình như thế nào?"})
-training_data.push({"class":"Cấu trúc chương trình", "sentence":"Cấu trúc chương trình của mình ra sao ạ?"})
-training_data.push({"class":"Cấu trúc chương trình", "sentence":"Cho hỏi về cấu trúc chương trình của mình sao ạ?"})
-training_data.push({"class":"Cấu trúc chương trình", "sentence":"Hệ mình đào tạo ra sao ạ?"})
+training_data.push({"class":"Cấu trúc chương trình", "sentence":"Hệ đào tạo của mình ạ?"})
 training_data.push({"class":"Cấu trúc chương trình", "sentence":"Em sẽ được đào tạo gì trong chương trình ạ?"})
 
 
@@ -226,12 +211,10 @@ training_data.push({"class":"TUITION FEE", "sentence":"the annual tuition fee"})
 training_data.push({"class":"TUITION FEE", "sentence":"the money require for a year"})
 training_data.push({"class":"TUITION FEE", "sentence":"1 semester cost"})
 
-training_data.push({"class":" Học phí ", "sentence":"Học phí bên mình là ?"})
-training_data.push({"class":" Học phí ", "sentence":"đóng tiền ?"})
+training_data.push({"class":" Học phí ", "sentence":"Tiền học mỗi kì bên mình là ?"})
+training_data.push({"class":" Học phí ", "sentence":"đóng tiền thường niên?"})
 training_data.push({"class":" Học phí ", "sentence":"tiền cần đóng?"})
-training_data.push({"class":" Học phí ", "sentence":"Học phí bên mình là ?"})
-training_data.push({"class":" Học phí ", "sentence":"Một năm học phí là mấy ạ?"})
-training_data.push({"class":" Học phí ", "sentence":"học phí thường niên?"})
+training_data.push({"class":" Học phí ", "sentence":"Học phí một năm bên mình là ?"})
 var corpus_words = {}
 var class_words = {}
 var mySet = new Set();
@@ -346,6 +329,8 @@ function classify(sentence){
 }
 
 classify("chuẩn tiếng anh đầu vào");
+
+classify("english need to enter");
 
 classify("love someone");
 
