@@ -227,12 +227,11 @@ training_data.push({"class":"TUITION FEE", "sentence":"the money require for a y
 training_data.push({"class":"TUITION FEE", "sentence":"1 semester cost"})
 
 training_data.push({"class":" Học phí ", "sentence":"Học phí bên mình là ?"})
-training_data.push({"class":" Học phí ", "sentence":"Học phí tại trung tâm xuất sắc là ?"})
-training_data.push({"class":" Học phí ", "sentence":"Tiền học tại trung tâm là?"})
-training_data.push({"class":" Học phí ", "sentence":"Học phí du học là sao?"})
+training_data.push({"class":" Học phí ", "sentence":"đóng tiền ?"})
+training_data.push({"class":" Học phí ", "sentence":"tiền cần đóng?"})
 training_data.push({"class":" Học phí ", "sentence":"Học phí bên mình là ?"})
 training_data.push({"class":" Học phí ", "sentence":"Một năm học phí là mấy ạ?"})
-
+training_data.push({"class":" Học phí ", "sentence":"học phí thường niên?"})
 var corpus_words = {}
 var class_words = {}
 var mySet = new Set();
@@ -348,10 +347,14 @@ function classify(sentence){
 
 classify("chuẩn tiếng anh đầu vào");
 
+classify("love someone");
+
 classify("hello")
 
 classify("thịt")
 
 classify("how about the tuition fee")
+
+classify("những cánh hoa phai tàn thật nhanh em có đi xa")
 
 classify("What will I receive at the university if I choose this program")
