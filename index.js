@@ -142,6 +142,7 @@ training_data.push({"class":"greeting", "sentence":"good morning"})
 training_data.push({"class":"greeting", "sentence":"good afternoon"})
 training_data.push({"class":"greeting", "sentence":"good evenening"})
 
+training_data.push({"class":" Chào hỏi ", "sentence":"chào"})
 training_data.push({"class":" Chào hỏi ", "sentence":"Alo"})
 training_data.push({"class":" Chào hỏi ", "sentence":"Ê"})
 training_data.push({"class":" Chào hỏi ", "sentence":"Ad ơi"})
@@ -155,7 +156,7 @@ training_data.push({"class":" Chào hỏi ", "sentence":"nè nè"})
 
 
 training_data.push({"class":"Chuẩn tiếng anh đầu vào", "sentence":"cần bao nhiêu điểm tiếng anh?"})
-training_data.push({"class":"Chuẩn tiếng anh đầu vào", "sentence":"chuẩn tiếng anh đầu vào là bao nhiêu?"})
+training_data.push({"class":"Chuẩn tiếng anh đầu vào", "sentence":"chuẩn tiếng anh đầu vào là ?"})
 training_data.push({"class":"Chuẩn tiếng anh đầu vào", "sentence":"mấy điểm TOEFL hay IELTS là vào được?"})
 training_data.push({"class":"Chuẩn tiếng anh đầu vào", "sentence":"đạt mấy điểm anh văn là qua?"})
 training_data.push({"class":"Chuẩn tiếng anh đầu vào", "sentence":"cần bao nhiêu điểm tiếng anh?"})
@@ -224,11 +225,11 @@ training_data.push({"class":"TUITION FEE", "sentence":"the annual tuition fee"})
 training_data.push({"class":"TUITION FEE", "sentence":"the money require for a year"})
 training_data.push({"class":"TUITION FEE", "sentence":"1 semester cost"})
 
-training_data.push({"class":" Học phí ", "sentence":"Học phí bên mình là bao nhiêu?"})
-training_data.push({"class":" Học phí ", "sentence":"Học phí tại trung tâm xuất sắc là bao nhiêu?"})
-training_data.push({"class":" Học phí ", "sentence":"Tiền học tại trung tâm là mấy?"})
+training_data.push({"class":" Học phí ", "sentence":"Học phí bên mình là ?"})
+training_data.push({"class":" Học phí ", "sentence":"Học phí tại trung tâm xuất sắc là ?"})
+training_data.push({"class":" Học phí ", "sentence":"Tiền học tại trung tâm là?"})
 training_data.push({"class":" Học phí ", "sentence":"Học phí du học là sao?"})
-training_data.push({"class":" Học phí ", "sentence":"Học phí bên mình là bao nhiêu?"})
+training_data.push({"class":" Học phí ", "sentence":"Học phí bên mình là ?"})
 training_data.push({"class":" Học phí ", "sentence":"Một năm học phí là mấy ạ?"})
 
 var corpus_words = {}
@@ -317,10 +318,10 @@ function classify(sentence){
         break;
 
     case "FACILITIES":
-        response_sentence = "Labs: Many basic and specialized labs - General Electronics Lab, Microelectronics Fluke - Intel Computer Room and Cadence Chip Design - Tektronix Measurement Laboratory - Texas Instrument Integrated Circuit and Instrumentation Laboratory and Research - Laboratory, research and development of intelligent robot technology - Laboratory of 3G and 4G National Instrument, R & S, AWR Library: - Academic and reference books in English for the entire curriculum - The Resource Center of DHDN (http://www.lirc.udn.vn/) Open Educational Resources in the world - Source of online magazine IEEE Xplorer (http://ieeexplore.ieee.org/) Internet: - High-speed fiber optic transmission line, wifi covering the entire learning area - Website: Provides information on teaching schedules, curriculum, news, job information";
+        response_sentence = "";
         break;
     case "cơ sở vật chất":
-        response_sentence = "Phòng Lab: Nhiều phòng Lab cơ bản và chuyên ngành hiện đại – Phòng thí nghiệm điện tử đại cương, vi điện tử Fluke – Phòng máy tính Intel và Thiết kế chip Cadence – Phòng thí nghiệm đo lường Tektronix – Phòng thí nghiệm và nghiên cứu mạch tích hợp và hệ thống nhúng Texas Instrument – Phòng thí nghiệm, nghiên cứu & phát triển kỹ thuật Robot thông minh – Phòng thí nghiệm hệ thống viễn thông 3G và 4G National Instrument, R&S, AWR Thư viện: – Sách học và sách tham khảo chuyên ngành bằng tiếng Anh cho toàn bộ chương trình đào tạo – Trung tâm Thông Tin Tư Liệu của ĐHĐN (http://www.lirc.udn.vn/‎) – Nguồn học liệu mở Open Educational Resources trên thế giới – Nguồn tạp chí online chuyên ngành IEEE Xplorer (http://ieeexplore.ieee.org/) Mạng Internet: – Đường truyền cáp quang tốc độ cao, wifi phủ sóng toàn bộ khu vực học tập – Website: cung cấp thông tin về lịch giảng dạy, chương trình học, tin tức mới, thông tin việc làm, học bổng, tài liệu học tập, giáo trình, sách điện tử.";
+        response_sentence = "Labs: Many basic and specialized labs - General Electronics Lab, Microelectronics Fluke - Intel Computer Room and Cadence Chip Design - Texas Instrument Integrated Circuit and Instrumentation Laboratory and Research - Laboratory, research and development of intelligent robot technology - Laboratory of 3G and 4G National Instrument, R & S, AWR Library: - Academic and reference books in English for the entire curriculum - The Resource Center of DHDN Open Educational Resources in the world - Source of online magazine IEEE Xplorer - Website: Provides information on teaching schedules, curriculum, news, job information";
         break;
 
 
@@ -337,6 +338,7 @@ function classify(sentence){
 	// console.log("sentence:",sentence)
 	// console.log("class:", highClass);
 	// console.log("score:", highscore, "\n");
+    console.log(response_sentence);
     return (response_sentence);
 }
 
