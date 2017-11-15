@@ -5,7 +5,9 @@ const app = express();
 const crypto = require('crypto');
 const fetch = require('node-fetch');
 var stemmer = require('stemmer');
-
+var Tokenizer = require('node-vntokenizer');
+var token = new Tokenizer();
+sw = require('stopword');
 //const access = EAAFM8bGZAZA0wBAHhYIyfgAb2ZBLlBNvdnrNkiSldZAis3Ung67RZBr4leQ99ZB6XPFliyn78FTYQbMu9BHZCtogL4oWHFqmX5gTwtKC5HlTdrOspsw7oTqGmTSGZA1sJcBSk7FPpVX18fg37NNaaBdjojY8C3xsWqTK3yysM6pxd6vM9qp58cHT;
 app.set('port', (process.env.PORT || 5000));
 
@@ -28,17 +30,14 @@ app.post('/webhook/', function (req, res) {
 
   // Make sure this is a page subscription
   if (data.object === 'page') {
-      var t=1;
     // Iterate over each entry - there may be multiple if batched
     data.entry.forEach(function(entry) {
       var pageID = entry.id;
       var timeOfEvent = entry.time;
       // Iterate over each messaging event
       entry.messaging.forEach(function(event) {
-        if (event.message && t==1) {
+        if (event.message) {
           receivedMessage(event);
-          t = t+1;
-          console.log("t ne`",t);
         } else {
           console.log("Webhook received unknown event: ", event);
         }
@@ -256,7 +255,7 @@ Array.prototype.contains = function(obj) {
 
 
 for (var i = 0; i <training_data.length; i++){
-	var sentence = training_data[i].sentence.split(" ");
+    var sentence =  sw.removeStopwords(token.tokenize(training_data[i].sentence));
 	var word;
 	for (word in sentence){
 		var stemmed_word = stemmer(sentence[word])
