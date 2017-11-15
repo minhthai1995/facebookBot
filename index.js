@@ -28,15 +28,17 @@ app.post('/webhook/', function (req, res) {
 
   // Make sure this is a page subscription
   if (data.object === 'page') {
+      var t=1;
     // Iterate over each entry - there may be multiple if batched
     data.entry.forEach(function(entry) {
       var pageID = entry.id;
       var timeOfEvent = entry.time;
-
       // Iterate over each messaging event
       entry.messaging.forEach(function(event) {
-        if (event.message) {
+        if (event.message && t==1) {
           receivedMessage(event);
+          t = t+1;
+          console.log("t ne`",t);
         } else {
           console.log("Webhook received unknown event: ", event);
         }
@@ -89,6 +91,7 @@ function sendGenericMessage(recipientId, messageText) {
 }
 function sendTextMessage(recipientId, messageText) {
   var myMessage = classify(messageText);
+  console.log("myMessage",myMessage);
   var messageData = {
     recipient: {
       id: recipientId
@@ -97,7 +100,6 @@ function sendTextMessage(recipientId, messageText) {
       text: myMessage
     }
   };
-
   callSendAPI(messageData);
 }
 
@@ -338,12 +340,12 @@ function classify(sentence){
 	// console.log("sentence:",sentence)
 	// console.log("class:", highClass);
 	// console.log("score:", highscore, "\n");
-    console.log(response_sentence);
+    // console.log(response_sentence);
     return (response_sentence);
 }
 
 
-// classify("who are you")
+classify("who are you")
 //
 // classify("make me some lunch");
 //
