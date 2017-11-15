@@ -318,10 +318,10 @@ function classify(sentence){
         break;
 
     case "FACILITIES":
-        response_sentence = "";
+        response_sentence = "Labs: Many basic and specialized labs - General Electronics Lab, Microelectronics Fluke - Intel Computer Room and Cadence Chip Design - Texas Instrument Integrated Circuit and Instrumentation Laboratory and Research - Laboratory, research and development of intelligent robot technology - Laboratory of 3G and 4G National Instrument, R & S, AWR Library: - Academic and reference books in English for the entire curriculum - The Resource Center of DHDN Open Educational Resources in the world - Source of online magazine IEEE Xplorer - Website: Provides information on teaching schedules, curriculum, news, job information";
         break;
     case "cơ sở vật chất":
-        response_sentence = "Labs: Many basic and specialized labs - General Electronics Lab, Microelectronics Fluke - Intel Computer Room and Cadence Chip Design - Texas Instrument Integrated Circuit and Instrumentation Laboratory and Research - Laboratory, research and development of intelligent robot technology - Laboratory of 3G and 4G National Instrument, R & S, AWR Library: - Academic and reference books in English for the entire curriculum - The Resource Center of DHDN Open Educational Resources in the world - Source of online magazine IEEE Xplorer - Website: Provides information on teaching schedules, curriculum, news, job information";
+        response_sentence = "Lab: Nhiều phòng Lab cơ bản và chuyên ngành hiện đại – Phòng thí nghiệm điện tử đại cương, vi điện tử Fluke – Phòng máy tính Intel và Thiết kế chip Cadence – Phòng thí nghiệm đo lường Tektronix – Phòng thí nghiệm, nghiên cứu & phát triển kỹ thuật Robot thông minh – Phòng thí nghiệm hệ thống viễn thông 3G và 4G National Instrument, R&S, AWR Thư viện: – Sách học và sách tham khảo chuyên ngành bằng tiếng Anh cho toàn bộ chương trình đào tạo – Trung tâm Thông Tin Tư Liệu của ĐHĐN– Nguồn học liệu mở Open Educational Resources trên thế giới – Nguồn tạp chí online chuyên ngành IEEE Xplorer ";
         break;
 
 
